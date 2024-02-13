@@ -38,6 +38,11 @@ internal class Program
             {
                 newFolder = folder.Trim() + " " + gameid;
             }
+            var newFile = Path.Combine(Path.GetDirectoryName(file), "game.iso");
+            if (file != newFile)
+            {
+                File.Move(file, newFile);
+            }
             if (folder != newFolder)
             {
                 Directory.Move(folder, newFolder);

@@ -34,6 +34,10 @@ internal class Program
             {
                 newFolder = folder.Substring(0, index).Trim() + " " + gameid;
             }
+            else
+            {
+                newFolder = folder.Trim() + " " + gameid;
+            }
             if (folder != newFolder)
             {
                 Directory.Move(folder, newFolder);
